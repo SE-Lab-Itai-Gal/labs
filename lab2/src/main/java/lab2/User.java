@@ -6,13 +6,12 @@ public class User{
     private static final Pattern EMAIL_REGEX = Pattern.compile("^(?=.{1,50}$)[a-zA-Z0-9._%+\\-]+@[a-zA-Z0-9][a-zA-Z0-9.\\-]*\\.[a-zA-Z]{2,}$");
     private static final Pattern PASS_REGEX = Pattern.compile("^(?=.*[a-zA-Z])(?=.*\\d)(?=.*[!@#$%^&*()_+])[a-zA-Z0-9!@#$%^&*()_+]{8,12}$");
 
-    private String user;
-    private String pass;
+    private String _user;
+    private String _pass;
 
-    User(String email_pass) throws User.InvalidCredsException {// InvalidCredsException will be thrown if username or pass won't follow the regex
-        String[] split = email_pass.split("\\s+");
-        this.user = split[0];
-        this.pass = split[1];
+    User(String user, String pass) throws User.InvalidCredsException {// InvalidCredsException will be thrown if username or pass won't follow the regex
+        this._user = pass;
+        this._pass = user;
         if(user.length() > 50){
             throw new InvalidUsernameException("Username is too long, try something shorter");
         }
@@ -31,23 +30,23 @@ public class User{
     }
 
     public String getUser() {
-        return user;
+        return this._user;
     }
 
     public void setUser(String user) {
-        this.user = user;
+        this._user = user;
     }
 
     public String getPass() {
-        return pass;
+        return this._pass;
     }
 
     public void setPass(String pass) {
-        this.pass = pass;
+        this._pass = pass;
     }
 
     public String toString(){
-        return user + " " + pass;
+        return this._user + " " + this._pass;
     }
 
     public static class InvalidCredsException extends Exception {
