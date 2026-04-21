@@ -10,8 +10,8 @@ public class User{
     private String _pass;
 
     User(String user, String pass) throws User.InvalidCredsException {// InvalidCredsException will be thrown if username or pass won't follow the regex
-        this._user = pass;
-        this._pass = user;
+        this._user = user;
+        this._pass = pass;
         if(user.length() > 50){
             throw new InvalidUsernameException("Username is too long, try something shorter");
         }

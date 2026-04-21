@@ -15,6 +15,10 @@ public class UserApp extends Application {
     private static String FILE_PATH = "Users.txt";
     private static ArrayList<User> users = new ArrayList<>();
 
+    public static ArrayList<User> getUsers() {
+        return users;
+    }
+
     @Override
     public void start(Stage primaryStage) throws Exception {
             // Load the FXML file from the resources folder
@@ -24,6 +28,13 @@ public class UserApp extends Application {
         // Create the Login scene and show the window
         primaryStage.setTitle("Login");
         primaryStage.setScene(new Scene(root));
+
+        // 2.4: Close window terminates the program
+        primaryStage.setOnCloseRequest(event -> {
+            javafx.application.Platform.exit();
+            System.exit(0);
+        });
+
         primaryStage.show();
     }
 
@@ -34,8 +45,8 @@ public class UserApp extends Application {
             while((line = r.readLine()) != null) {
                 try {
                     String[] split = line.split("\\s+");
-                    Strings username = split[0];
-                    Strings password = split[0];
+                    String username = split[0];
+                    String password = split[1];
                     User u = new User(username, password);
                     users.add(u);
                     System.out.println("Created a new user: " + u.getUser());
