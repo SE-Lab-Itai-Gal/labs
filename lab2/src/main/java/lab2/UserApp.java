@@ -33,7 +33,10 @@ public class UserApp extends Application {
             String line;
             while((line = r.readLine()) != null) {
                 try {
-                    User u = new User(line);
+                    String[] split = line.split("\\s+");
+                    Strings username = split[0];
+                    Strings password = split[0];
+                    User u = new User(username, password);
                     users.add(u);
                     System.out.println("Created a new user: " + u.getUser());
                 } catch (User.InvalidCredsException e) {
