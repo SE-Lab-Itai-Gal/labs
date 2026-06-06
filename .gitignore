@@ -27,4 +27,6 @@ replay_pid*
 
 # Exclude files
 !lab6/ocsf/dist/*
+!lab7/tictactoe/dist/
+!lab7/tictactoe/dist/*
 

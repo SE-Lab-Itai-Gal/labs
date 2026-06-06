@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.GridPane?>
+
+<BorderPane xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="il.cshaifasweng.tictactoe.client.BoardController">
+    <top>
+        <Label fx:id="statusLabel" text="Connecting..." style="-fx-font-size: 16px; -fx-font-weight: bold;">
+            <BorderPane.margin>
+                <Insets top="14.0" bottom="14.0" left="14.0" right="14.0"/>
+            </BorderPane.margin>
+        </Label>
+    </top>
+    <center>
+        <GridPane hgap="6.0" vgap="6.0" alignment="CENTER">
+            <padding>
+                <Insets top="10.0" bottom="20.0" left="20.0" right="20.0"/>
+            </padding>
+            <children>
+                <Button fx:id="b0" onAction="#handleClick" prefWidth="90" prefHeight="90" style="-fx-font-size: 36px;" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <Button fx:id="b1" onAction="#handleClick" prefWidth="90" prefHeight="90" style="-fx-font-size: 36px;" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                <Button fx:id="b2" onAction="#handleClick" prefWidth="90" prefHeight="90" style="-fx-font-size: 36px;" GridPane.columnIndex="2" GridPane.rowIndex="0"/>
+                <Button fx:id="b3" onAction="#handleClick" prefWidth="90" prefHeight="90" style="-fx-font-size: 36px;" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <Button fx:id="b4" onAction="#handleClick" prefWidth="90" prefHeight="90" style="-fx-font-size: 36px;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                <Button fx:id="b5" onAction="#handleClick" prefWidth="90" prefHeight="90" style="-fx-font-size: 36px;" GridPane.columnIndex="2" GridPane.rowIndex="1"/>
+                <Button fx:id="b6" onAction="#handleClick" prefWidth="90" prefHeight="90" style="-fx-font-size: 36px;" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <Button fx:id="b7" onAction="#handleClick" prefWidth="90" prefHeight="90" style="-fx-font-size: 36px;" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+                <Button fx:id="b8" onAction="#handleClick" prefWidth="90" prefHeight="90" style="-fx-font-size: 36px;" GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+            </children>
+        </GridPane>
+    </center>
+</BorderPane>
