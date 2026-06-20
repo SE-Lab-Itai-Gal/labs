@@ -1,0 +1,7 @@
+# Maven build output (the runnable jar is published under dist/)
+target/
+
+# LaTeX build intermediates (report.tex / report.pdf are kept)
+docs/*.aux
+docs/*.log
+docs/*.out

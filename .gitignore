@@ -29,4 +29,6 @@ replay_pid*
 !lab6/ocsf/dist/*
 !lab7/tictactoe/dist/
 !lab7/tictactoe/dist/*
+!lab8/coursemgmt/dist/
+!lab8/coursemgmt/dist/*
 
